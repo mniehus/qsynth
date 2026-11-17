@@ -1,0 +1,18 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="qsynth-quantum"
+version="0.1.0"
+description="Quantum-engineering experiments and benchmarks for Q-SYNTH"
+requires-python=">=3.12"
+dependencies=["numpy>=2.0","qiskit==2.6.2","qiskit-aer==0.18.4"]
+
+[project.optional-dependencies]
+notebooks=["jupyterlab>=4","matplotlib>=3.9"]
+docs=["mkdocs>=1.6","mkdocs-material>=9.5","pymdown-extensions>=10"]
+dev=["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where=["src"]

@@ -1,0 +1,36 @@
+site_name: Q-SYNTH — Quantum Engineering
+site_description: From information engines and feedback control to QUBO, Ising models, QAOA and quantum benchmarking
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - Home: index.md
+  - Project:
+      - Q-SYNTH overview: overview.md
+      - Architecture: architecture.md
+  - Physical context:
+      - Information engine: information-engine.md
+      - Stochastic thermodynamics: thermodynamics.md
+      - FPGA and real-time control: fpga.md
+  - Quantum engineering:
+      - From control to optimization: optimization.md
+      - QUBO and Ising mapping: qubo-ising.md
+      - Quantum circuits and QAOA: qaoa.md
+      - Simulation with Qiskit Aer: simulation.md
+      - Benchmarking: benchmarking.md
+  - Reproducibility:
+      - Logbook: logbook.md
+      - Environment: environment.md
+  - Reference:
+      - Acronyms & concepts: glossary.md
+      - References: references.md

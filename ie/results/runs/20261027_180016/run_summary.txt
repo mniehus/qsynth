@@ -1,0 +1,52 @@
+Q-SYNTH P1 SOFTWARE RUN
+========================================
+Created: 2026-10-27T18:00:16.777837
+
+[PHYSICAL / EXPERIMENTAL PARAMETERS]
+Temperature               : 298.150 K
+Fluid viscosity           : 1.000000e-03 Pa s
+Bead radius               : 1.500 um
+Bead diameter             : 3.000 um
+Effective density diff.   : 1000.000 kg/m^3
+Trap stiffness            : 7.300 pN/um
+Measurement noise sigma   : 2.000 nm
+
+[DERIVED MODEL PARAMETERS]
+Diffusion D [um^2/s]      : 0.14558804499637473
+Relaxation time [ms]      : 3.8731964222339914
+Thermal sigma [nm]        : 23.746391199506505
+Gravitational sag [nm]    : 18.998028451057724
+Q_phys [nm^2]             : 5.7935541681413385
+R_phys [nm^2]             : 4.0
+
+[SIMULATION / TIMING PARAMETERS]
+Plant period              : 20.000 us
+Measurement period        : 20.000 us
+Estimator period          : 20.000 us
+Controller period         : 20.000 us
+Actuator period           : 20.000 us
+Actuator delay            : 20.000 us
+Statistics period         : 1.000 ms
+Supervisor period         : 100.000 ms
+
+[ESTIMATOR / CONTROLLER POLICY]
+Policy                    : nominal
+Q_eff                     : 5.793554 nm^2
+R_eff                     : 4.000000 nm^2
+alpha                     : 2.000000
+X_T                       : 0.000000 nm
+
+[RESULTS]
+velocity_mean_um_s        : 2.096345178846426
+displacement_cumulative_um: 2.031118096691363
+estimator_error_RMS_nm    : 1.6666782609544226
+ratchet_events_count      : 831
+ratchet_rate_mean_Hz      : 831.0166203318096
+extracted_energy_cumulative_kBT: 68.43030459347958
+extracted_power_mean_kBT_s: 70.62786716105545
+innovation_RMS_nm         : 3.553412679811691
+estimator_covariance_mean_nm2: 2.8035926071386554
+trap_moves_count          : 831
+trap_work_cumulative_J    : -7.078906692822652e-23
+trap_power_mean_kBT_s     : -0.01735930092073861
+balance_power_mean_kBT_s  : 70.6452264619762
