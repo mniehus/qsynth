@@ -1,5 +1,4 @@
-qiskit==2.6.2
-qiskit-aer==0.18.4
-numpy>=2.0
-jupyterlab>=4
-matplotlib>=3.9
+# From the repository root, use the Python 3.15 virtual environment:
+# python -m pip install -r requirements.txt
+# Installs the editable quantum package, JupyterLab, IE plotting, and pytest.
+-e .[notebooks,dev]
