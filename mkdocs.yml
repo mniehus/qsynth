@@ -13,6 +13,8 @@ markdown_extensions:
   - pymdownx.superfences
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+exclude_docs: |
+  /logbook.md
 nav:
   - Home: index.md
   - Project:
@@ -29,7 +31,6 @@ nav:
       - Simulation with Qiskit Aer: simulation.md
       - Benchmarking: benchmarking.md
   - Reproducibility:
-      - Logbook: logbook.md
       - Environment: environment.md
   - Reference:
       - Acronyms & concepts: glossary.md

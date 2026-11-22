@@ -8,3 +8,4 @@ __pycache__/
 site/
 results/*
 !results/.gitkeep
+/ie/results/runs/
