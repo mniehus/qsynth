@@ -19,7 +19,10 @@ from visualization.dashboard import Dashboard
 
 def build_simulation(
     policy_library,
-    seed=42
+    seed=42,
+    *,
+    fixed_policy=None,
+    sigma_m=None
 ):
     rng = np.random.default_rng(seed)
 
@@ -33,7 +36,7 @@ def build_simulation(
     measurement = MeasurementBlock(
         period=timing.measurement_period,
         rng=rng,
-        sigma_m=sensor.sigma_m
+        sigma_m=sensor.sigma_m if sigma_m is None else sigma_m
     )
 
     estimator = KalmanEstimator(
@@ -65,6 +68,11 @@ def build_simulation(
         estimator=estimator,
         controller=controller
     )
+    if fixed_policy is not None:
+        supervisor.apply_policy(policy_library[fixed_policy], t=0.0, bus=bus)
+        supervisor.enabled = False
+        # These rolling statistics are only consumed by the adaptive supervisor.
+        statistics.enabled = False
 
     dashboard = Dashboard(
         period=10e-3
