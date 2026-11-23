@@ -18,7 +18,7 @@ exclude_docs: |
 nav:
   - Home: index.md
   - Start here:
-      - Informatics / Computer Engineering students: start-meim.md
+      - Master's students in Informatics Engineering: start-meim.md
       - Project collaborators: start-collaborators.md
   - Project:
       - Q-SYNTH overview: overview.md

@@ -1,4 +1,4 @@
-# Start here for Informatics and Computer Engineering
+# Start here for master's students in Informatics Engineering
 
 Start with the optimization problem: assign one policy to each regime and score the resulting map.
 

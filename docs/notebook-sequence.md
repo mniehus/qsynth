@@ -1,6 +1,6 @@
 # Notebook sequence and review
 
-This review is for master's students in Informatics Engineering, Informatics and Computer Engineering, and Multimedia Informatics Engineering. Start with the question and prediction, run the worked example, then use the result and presentation asset to explain the conclusion back to someone else.
+This review is for master's students in Informatics Engineering. Start with the question and prediction, run the worked example, then use the result and presentation asset to explain the conclusion back to someone else.
 
 | Notebook | Core question | Concept | Equation or representation | Main result | Execution | Scientific status | Teaching status | Seminar visual | Remaining action |
 |---|---|---|---|---|---|---|---|---|---|

@@ -11,4 +11,4 @@ Quantum computing initially supports offline policy synthesis and optimization. 
 7. Validate synthesized policy maps back in the IE simulator.
 8. Maintain reproducible Python code, notebooks, tests, and an engineering logbook.
 9. Publish selected material through GitHub Pages.
-10. Support two entry audiences, [MEIM students](docs/start-meim.md) and [project collaborators](docs/start-collaborators.md).
+10. Support two entry audiences, [master's students in Informatics Engineering](docs/start-meim.md) and [project collaborators](docs/start-collaborators.md).

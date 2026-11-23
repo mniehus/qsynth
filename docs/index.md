@@ -10,11 +10,11 @@ The emphasis is on a reproducible chain from a real physical system to a well-de
 \text{physical system}\rightarrow\text{simulation}\rightarrow J_{ij}\rightarrow\text{policy optimization}\rightarrow\text{QUBO}\rightarrow\text{Ising}\rightarrow\text{circuit}\rightarrow\text{QPU}
 \]
 
-The site is written primarily for informatics students. Physics, stochastic thermodynamics and FPGA control are included because they define the application and its constraints; the main focus is computational representation, algorithms, implementation and benchmarking.
+The seminar is designed for master's students in Informatics Engineering. Physics, stochastic thermodynamics, and FPGA control define the application and its constraints. The main focus is computational representation, algorithms, implementation, and benchmarking.
 
 ## Choose a route
 
-- [Informatics and Computer Engineering students](start-meim.md) start with algorithms, representation, and evaluation.
+- [Master's students in Informatics Engineering](start-meim.md) start with algorithms, representation, and evaluation.
 - [Project collaborators](start-collaborators.md) start with the physical system, feedback constraints, and validation.
 
 Both routes use the same notebooks. This site explains the concepts and guides readers to executable derivations and experiments. Reusable implementation lives in Python modules.
