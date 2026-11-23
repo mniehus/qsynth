@@ -2,7 +2,7 @@
 
 Simulate → build \(J_{ij}\) → exact classical solution → QUBO → Ising → QAOA → coupling → scaling → robustness → validate the selected policy map back in the IE simulator.
 
-The filenames below define the target teaching sequence. The current `01_qaoa_2x2.ipynb` combines several phases and serves as a working reference for the split.
+The filenames below define the teaching sequence. [The combined QAOA prototype](notebooks/reference_qaoa_2x2.ipynb) serves as a working reference outside that sequence.
 
 | Phase | Notebook | Scope |
 |---|---|---|
