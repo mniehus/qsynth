@@ -23,6 +23,7 @@ nav:
   - Project:
       - Q-SYNTH overview: overview.md
       - Architecture: architecture.md
+      - Synthesis and validation workflow: workflow.md
   - Physical context:
       - Information engine: information-engine.md
       - Stochastic thermodynamics: thermodynamics.md
@@ -38,6 +39,8 @@ nav:
       - Benchmarking: benchmarking.md
   - Reproducibility:
       - Environment: environment.md
+      - Notebook sequence and review: notebook-sequence.md
+      - Seminar visuals: seminar-assets.md
   - Reference:
       - Acronyms & concepts: glossary.md
       - References: references.md

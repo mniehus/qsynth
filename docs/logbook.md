@@ -90,6 +90,16 @@ QE-001 is only an installation/simulator sanity check; it is not evidence about 
 
 ---
 
+## 2026-11-23 — Notebook sequence reproducibility audit
+
+- Ran all 11 numbered notebooks from 00 through 10 in fresh local kernels without overwriting saved notebook outputs. Python 3.15.2, NumPy 2.5.5, Qiskit 2.6.2, Aer 0.18.4, Matplotlib 3.11.2. The audit used each notebook's recorded seeds and shots. A local Jupyter TCP transport warning appeared. No execution blocker was observed.
+- Notebook 02 reran all 20 fixed-policy trials. The rounded cell means matched the stored five-seed matrix used to render the new heatmaps. Notebook 06's verified exact maps at switching weights 0 and 2 supplied the companion chain diagram.
+- Notebook 05 also passed with the local IE-derived JSON. The default run reported a different transpiled gate mix from its saved output, with the same feasibility and optimality. Runtime and compiled instruction counts should be recorded with their execution context.
+- The review separates illustrative instances, the IE simulation pilot, and synthetic device/noise results. The numbered study order was retained. The seminar path starts from the IE model and moves through coupling before explaining the simpler binary and quantum derivations.
+- The available evidence supports discussion with a hardware team. A calibrated target, actual device data, and independent IE validation remain future work.
+
+---
+
 ## Entry template
 
 ### YYYY-MM-DD — QE-XXX: title

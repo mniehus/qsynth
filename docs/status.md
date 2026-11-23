@@ -10,10 +10,12 @@
 - Notebook 08 compares one-hot and compact encodings on five illustrative chain instances. Exact checks agree through 4×4. The two eight-regime cases report analytical resources.
 - Notebook 09 compiles both encodings of the validated 4×2 chain on a synthetic eight-site line. It compares levels 0, 1 and 3, verifies circuit equivalence, and measures routing overhead against an all-connected target with the same basis.
 - Notebook 10 uses the same circuits to compare exact probabilities, repeated ideal shots, and noisy Aer on the synthetic line. A matched native-circuit control isolates the effect of enabling the model.
+- All 11 numbered notebooks ran end to end in fresh local kernels. The [sequence review](notebook-sequence.md) records reproducibility and presentation caveats. The [workflow](workflow.md) and [seminar visual inventory](seminar-assets.md) consolidate the evidence.
 
 ## Current
 
 - Use the illustrative matrix as the common teaching reference. The saved notebook outputs distinguish the illustrative optimization from the measured IE pilot.
+- The verified benchmark supports an exploratory hardware-team discussion about target data, access and evaluation. Device results and held-out IE validation are pending.
 
 ## Next
 

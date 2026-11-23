@@ -18,3 +18,5 @@ The site is written primarily for informatics students. Physics, stochastic ther
 - [Project collaborators](start-collaborators.md) start with the physical system, feedback constraints, and validation.
 
 Both routes use the same notebooks. This site explains the concepts and guides readers to executable derivations and experiments. Reusable implementation lives in Python modules.
+
+Follow the [synthesis and validation workflow](workflow.md) for the full project or the [notebook sequence](notebook-sequence.md) for the hands-on route.
