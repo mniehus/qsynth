@@ -15,7 +15,11 @@ The filenames below define the teaching sequence. [The combined QAOA prototype](
 | **6 · Coupled policy maps** | `06_coupled_policy_map.ipynb` | Start with a simple regime chain or grid and add a neighboring-regime smoothness or switching cost. Compare independent row-wise choices with the global optimum and show when they differ. Specify the local matrix \(J_{ij}\) and the regime/policy coupling structure separately. |
 | **7 · Scaling** | `07_scaling_policy_maps.ipynb` | Vary \(N_\rho\), \(N_\psi\), graph topology and coupling density, penalty strength, QAOA depth, and shots. Record valid maps \(N_\psi^{N_\rho}\), binary variables and qubits, QUBO/Ising couplings, logical and relevant transpiled depths, one- and two-qubit gate counts, runtime, and solution quality. |
 | **8 · Encoding comparison** | `08_encoding_comparison.ipynb` | Compare one-hot and compact encodings. Later, evaluate constraint-preserving approaches such as an XY mixer. |
-| **9 · Classical versus quantum benchmark** | `09_classical_vs_quantum_benchmark.ipynb` | Use identical instances for exact enumeration on small cases, a strong structured classical solver where applicable, a classical heuristic, ideal QAOA, finite-shot QAOA, noisy/device-aware QAOA, and later a real QPU. |
-| **10 · Robust synthesis** | `10_robust_policy_synthesis.ipynb` | Use repeated IE evaluations to obtain distributions \(J_{ij}^{(r)}\). Compare mean, mean minus a variance penalty for performance maximization (mean plus a penalty for cost minimization), and worst-case objectives. Add thermodynamic or multiobjective terms later. |
+| **9 · Hardware-aware transpilation** | `09_hardware_aware_transpilation.ipynb` | Map the same logical cost circuits to representative hardware constraints. Compare depth, routing, native gate counts, and the effect of encoding. |
+| **10 · Device-aware simulation** | `10_noisy_device_aware_aer.ipynb` | Compare ideal statevector predictions, ideal finite-shot Aer, and noisy Aer on the same circuits before real QPU execution. |
 
 Close the loop by replaying selected maps in the IE simulator and comparing their performance with the classical baseline under the same validation scenarios.
+
+Later benchmarking should compare identical instances across exact or structured classical solvers, classical heuristics, ideal and finite-shot QAOA, noisy or device-aware simulation, and eventually QPU execution.
+
+Later robust synthesis should use repeated IE evaluations to compare mean, variance-penalized, and worst-case objectives. Thermodynamic and multiobjective terms can follow.

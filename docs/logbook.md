@@ -51,6 +51,45 @@ QE-001 is only an installation/simulator sanity check; it is not evidence about 
 
 ---
 
+## 2026-11-23 — First policy-map scaling study
+
+- **Instance family** · Notebook 07 takes row and column prefixes of the fixed illustrative score table `[[4,0,2],[1,4,3],[4,0,2],[0,6,3],[5,1,2],[1,4,2]]`. It varies regime count, policy count, chain/cycle/complete topology, and switching weight \(\beta\in\{0,1,2,6\}\). The 4×2 chain at weight 2 reproduces Notebook 06's optimum, 1112 with score 13.
+- **Exact baseline** · All ten cases solved by enumeration of valid maps, with seven timing repeats per case. The 4×3 and 6×2 chains both use 12 qubits and 4,096 binary strings. They have 81 versus 64 valid maps and 30 versus 16 quadratic terms, respectively. On the 4×2 case at weight 2, the chain, cycle, and complete graphs use 10, 12, and 16 quadratic terms and the same eight qubits. Each nonzero QUBO pair yields one Ising \(ZZ\) term.
+- **Aer preview** · Python 3.15.2, Qiskit 2.6.2, and Aer 0.18.4. Depth-one QAOA with the standard X mixer, a 32×24 ideal angle grid, 8,192 shots per case, and simulator seed 42. The 2×2 and 3×2 chain cases at weight 2 matched the exact baselines after encoding.
+- **Logical resources and samples** · The 2×2 optimum is 12, score 6. Angles were \((0.196350,1.178097)\) radians. Four qubits, depth five, 11 one-qubit gates, and four two-qubit gates produced 87.22% feasible and 28.39% optimal shots. The 3×2 optimum is 111, score 9. Angles were \((0.392699,2.094395)\). Six qubits, depth six, 18 one-qubit gates, and seven two-qubit gates produced 57.74% feasible and 5.18% optimal shots.
+- **Interpretation** · The counts separate the cost of the encoding from the structure of the optimization problem. Sampling rates describe these two circuits and angle grids. Device compilation and larger searches are future experiments.
+
+---
+
+## 2026-11-23 — One-hot versus compact encoding
+
+- **Instance family** · Notebook 08 uses the coupled chain objective from Notebooks 06–07 with mismatch cost 1 and switching weight 2. The 4×2 and 4×3 scores are unchanged. New entries use \((3i+2j+ij)\bmod 7\) on zero-based indices, with the original six-by-three table retained.
+- **Exact verification** · Python 3.15.2 and NumPy 2.5.5. Both encodings reproduced every valid-map score and agreed with their Pauli expansions on every string for 4×2, 4×3, and 4×4. The respective optima were 1112 (13), 1112 (13), and 4442 (19). All ground states were feasible.
+- **Resources** · The 4×2 compact QUBO uses four qubits and three \(ZZ\) terms, compared with eight qubits and ten \(ZZ\) terms for one-hot. The 4×3 compact encoding has 81 valid strings out of 256 and three weight-four Pauli terms. The analytical 8×8 counts are 64 versus 24 qubits and 1,232 versus 316 estimated CNOTs per cost layer for one-hot versus compact. The compact Hamiltonian has 36 higher-weight Pauli terms, up to weight six. Estimates use independent parity ladders and all-to-all logical connectivity.
+- **Scope** · The two eight-regime cases use sparse coefficient counts without state enumeration. This comparison ends at logical resource estimates.
+
+---
+
+## 2026-11-23 — Hardware-aware transpilation
+
+- **Instance** · Notebook 06's illustrative 4×2 chain with switching weight 2. Both QUBO and Ising encodings preserve all 16 valid scores. Exact optimum 1112, score 13. Depth-one X-mixer QAOA, 32×24 ideal angle grid, 8,192 shots, simulator seed 42. The compact angles were \((0.196350,2.487094)\), with 100% feasible and 19.62% optimal shots. One-hot used \((6.086836,2.748894)\), with 50.50% feasible and 5.87% optimal shots.
+- **Environment and target** · Python 3.15.2, Qiskit 2.6.2, and Aer 0.18.4. Locally defined eight-site bidirectional line with RZ, SX, X, and CX. Identity placement, BasicSwap routing, optimization levels 0, 1 and 3, transpiler seed 42. The all-connected reference uses the same basis. The target has no calibration data and does not describe Euro-Q-Exa.
+- **Level 1 resources** · Compact used four active sites. Depth 6 → 17, total gates 15 → 41, one-qubit gates 12 → 35, and two-qubit gates 3 → 6, with zero SWAPs and zero extra CX versus the all-connected reference. One-hot used eight active sites. Depth 7 → 52, total gates 34 → 116, one-qubit gates 24 → 74, and two-qubit gates 10 → 42, with eight routing SWAPs and 22 extra CX. Layouts and the other levels are recorded in the notebook.
+- **Verification and scope** · All six mapped circuits use supported instructions on permitted sites and reproduce the logical unitaries after accounting for layout and global phase. This measures compilation resources. Noisy simulation and real QPU execution are later experiments.
+
+---
+
+## 2026-11-23 — Ideal, finite-shot and device-aware Aer
+
+- **Fixed benchmark** · Notebook 09's 4×2 chain, switching weight 2, exact optimum 1112 with score 13. Depth-one QAOA, compact angles \((0.196349541,2.487094184)\) and one-hot angles \((6.086835766,2.748893572)\) radians, reconstructed from their original 32×24 grid coordinates.
+- **Environment and runs** · Python 3.15.2, Qiskit 2.6.2, Aer 0.18.4, NumPy 2.5.5. Exact Qiskit statevector, ideal Aer in statevector mode at 100, 500, 1,000, 4,096 and 10,000 shots, then matched mapped Aer in density-matrix mode at 4,096 shots. Each sampled condition used seeds 42–46. The saved Notebook 10 tables report each shot count, outcome frequencies, repeat standard deviations, and conditional mean and best scores.
+- **Target and noise** · Notebook 09's RZ/SX/X/CX eight-site bidirectional line, level 1, identity placement, BasicSwap, transpiler seed 42. Aer derives gate, thermal-relaxation and readout errors via `NoiseModel.from_backend` from synthetic `GenericBackendV2` properties generated with seed 42, using temperature 0 mK and no duration overrides. Site and instruction parameters are recorded in the notebook. These are synthetic properties rather than QPU calibration.
+- **Compact result** · Ideal statevector, ideal Aer, mapped noise off and mapped noise on gave optimal rates of 19.87%, 20.29%, 20.29% and 20.19%, respectively. All were 100% feasible. Conditional mean scores were 11.250, 11.265, 11.265 and 11.188. The mapped circuit used four sites, depth 17 and six CX gates.
+- **One-hot result** · The same conditions gave optimal rates of 5.98%, 5.72%, 6.13% and 5.17%. Feasible rates were 49.75%, 49.91%, 49.58% and 43.59%, with conditional mean scores of 8.674, 8.673, 8.726 and 8.695. The mapped circuit used eight sites, depth 52 and 42 CX gates after eight routing SWAPs.
+- **Interpretation** · Both encodings reached a best score of 13 in every reported condition. Rates and mean scores distinguish the distributions. The matched mapped comparison measures the combined modeled noise effect. It cannot isolate the effect of any single error source. Real QPU execution remains pending.
+
+---
+
 ## Entry template
 
 ### YYYY-MM-DD — QE-XXX: title

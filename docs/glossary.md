@@ -4,6 +4,7 @@ Terms for readers with an Informatics or Computer Engineering background.
 
 - **ADC — Analog-to-Digital Converter** — converts an analog measurement to digital samples.
 - **Aer** — Qiskit's high-performance quantum-circuit simulator project; not normally expanded as an acronym.
+- **Ancilla** — an auxiliary bit or qubit used to represent an intermediate value or implement an operation.
 - **Ansatz** — parameterized trial form; in VQAs, a family of circuits optimized classically.
 - **AOD — Acousto-Optic Deflector** — optical beam-steering actuator controlled by RF drive.
 - **Approximation ratio** — normalized quality of an approximate solution relative to a reference optimum; definition is problem-dependent.
@@ -17,13 +18,16 @@ Terms for readers with an Informatics or Computer Engineering background.
 - **Crooks fluctuation relation** — nonequilibrium theorem named after Gavin Crooks comparing forward and reverse work distributions.
 - **DAC — Digital-to-Analog Converter** — converts digital control values to analog signals.
 - **Detailed balance** — equilibrium condition balancing microscopic transition flows.
+- **Density matrix** — a representation of a quantum state that supports both pure states and probabilistic mixtures, used to propagate noisy quantum operations.
 - **Entanglement** — a property of a joint quantum state that cannot be represented as a mixture of independent subsystem states. A Bell state has this property.
 - **Entropy production** — thermodynamic measure of irreversibility.
+- **Encoding** — a rule assigning each candidate solution a bit string, subject to any validity constraints.
 - **Estimator** — algorithm inferring an internal state from measurements and a model.
 - **FPGA — Field-Programmable Gate Array** — reconfigurable hardware for deterministic low-latency processing/control.
 - **Fluctuation theorem** — a relation constraining the probabilities of thermodynamic fluctuations. Crooks' relation compares work distributions for forward and reverse driving protocols.
 - **Fokker–Planck equation** — PDE describing evolution of a probability density for stochastic dynamics.
 - **Hamiltonian** — an energy function in classical mechanics or an energy operator in quantum mechanics. The quantum operator generates time evolution. In quantum optimization its energies can encode objective values.
+- **Higher-order interaction** — a term involving three or more variables or acting on three or more qubits.
 - **HPC — High-Performance Computing** — large-scale classical computing; QPUs are commonly considered hybrid accelerators.
 - **Information engine** — physical system using measurement/feedback information to extract useful work or direct fluctuations.
 - **Ising model** — an energy model for two-valued spins with local fields and pairwise interactions. Its energy can represent a binary optimization objective.
@@ -35,6 +39,7 @@ Terms for readers with an Informatics or Computer Engineering background.
 - **Mutual information** — statistical measure of shared information/dependence between random variables.
 - **Mutual information in feedback** — how much a measurement reveals on average about the physical state. Feedback can use that information to select an action. Thermodynamic relations may use the corresponding information for each outcome.
 - **NISQ — Noisy Intermediate-Scale Quantum** — term for useful experimental quantum processors still limited by noise and scale.
+- **Native gate** — an operation supported directly by a particular compilation target.
 - **One-hot encoding** — exactly one binary variable in a group is 1.
 - **Optimality gap** — difference between candidate and reference optimum, often normalized.
 - **Optical tweezer** — a tightly focused laser that uses optical forces to trap and move a small particle, such as the bead in the information engine.
@@ -46,13 +51,18 @@ Terms for readers with an Informatics or Computer Engineering background.
 - **QPU — Quantum Processing Unit** — hardware executing quantum circuits.
 - **Qubit** — a two-level quantum system whose pure state has complex amplitudes for basis states 0 and 1. Measurement in that basis returns one bit.
 - **QUBO — Quadratic Unconstrained Binary Optimization** — quadratic optimization over binary variables.
+- **Quadratization** — replacing a higher-degree binary objective with a quadratic one, often using auxiliary bits so that minimizing over them recovers the original energy.
 - **RFSoC — Radio-Frequency System-on-Chip** — integrates FPGA, processors and high-speed converters.
+- **Readout error** — a mismatch between the measurement outcome and the bit reported by the measurement system.
+- **Routing** — adapting a circuit to allowed physical links, for example by moving logical states between sites.
 - **Sagawa–Ueda relation** — generalized fluctuation/second-law relations associated with Takahiro Sagawa and Masahito Ueda including information and feedback.
 - **Shot** — one execution and measurement of a quantum circuit.
 - **Spin** — intrinsic quantum angular momentum in physics. An Ising spin is an idealized two-valued variable, typically \(+1\) or \(-1\), representing a spin component or encoding a binary choice.
 - **Statevector** — complex vector representing a pure quantum state; dimension grows exponentially with qubits.
 - **Stochastic thermodynamics** — describes work, heat, and entropy production along individual fluctuating trajectories and relates those quantities statistically.
 - **Superposition** — coherent quantum combination of basis states; not equivalent to reading all classical answers in parallel.
+- **SWAP** — a two-qubit gate that exchanges the states at two sites.
+- **Topology** — the graph of physical qubit sites and allowed interactions between them.
 - **Transpilation** — compilation/mapping of a logical circuit to target-native gates/connectivity.
 - **Two-qubit gate** — joint operation on two qubits; a key noisy-hardware resource metric.
 - **VQA — Variational Quantum Algorithm** — hybrid algorithm with a parameterized QPU circuit and classical optimizer.
