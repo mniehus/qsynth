@@ -13,3 +13,9 @@ Simulation ladder:
 5. real-QPU execution.
 
 The first experiment is a Bell-state sanity check. The next experiment maps a tiny Q-SYNTH optimization instance through QUBO and Ising form before constructing a QAOA circuit.
+
+A statevector simulator tracks the complex amplitudes of a pure quantum state. Finite-shot simulation samples measurement outcomes and shows sampling variability even without device noise. A physical quantum processing unit (QPU) has native gates and limited connectivity. Transpilation maps the logical circuit to those constraints and can change depth and gate counts.
+
+## Reproduce this step
+
+Verify Bell-state preparation and measurement in [Notebook 00](https://github.com/mniehus/qsynth/blob/main/notebooks/00_environment_and_bell.ipynb).

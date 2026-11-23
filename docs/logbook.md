@@ -41,6 +41,16 @@ QE-001 is only an installation/simulator sanity check; it is not evidence about 
 
 ---
 
+## 2026-11-23 — First coupled policy map
+
+- **Instance** · Illustrative performance matrix `[[4, 0], [1, 4], [4, 0], [0, 6]]`, with rows in regime order and columns in policy order. The graph is the chain 1–2–3–4. Each edge costs zero for equal policies and \(\beta\) for different policies.
+- **Exact enumeration** · All 16 valid maps were evaluated. At \(\beta=0\), map 1212 scored 18 with three transitions. At \(\beta=2\), map 1112 scored 13 with one transition. At \(\beta=6\), map 2222 scored 10 with zero transitions. The sweep showed ties at 1.5 and 5.
+- **Encoding** · At \(\beta=2\), one-hot penalty 20. The expanded QUBO matched direct energy evaluation on all 256 strings and exact map scores on all 16 feasible strings. The unique ground state encoded 1112 at energy −13. Ising energies matched the QUBO after adding a constant offset of 33.5.
+- **Aer run** · Python 3.15.2, Qiskit 2.6.2, Aer 0.18.4. Standard X mixer, \(p=1\), 32×24 ideal angle grid, 8,192 shots on `aer_simulator`, seed 42. Selected angles \((\gamma,\theta)=(6.086836,2.748894)\) radians. Feasible shots were 50.50%, optimal shots were 5.87%, and the best sampled map was 1112 with score 13.
+- **Logical resources** · Eight qubits, ten QUBO quadratic couplings and ten Ising \(ZZ\) terms. Before measurement the circuit had depth seven, 24 one-qubit gates, and ten two-qubit gates. These counts precede device placement, routing and native-gate decomposition.
+
+---
+
 ## Entry template
 
 ### YYYY-MM-DD — QE-XXX: title

@@ -1,5 +1,7 @@
 # Stochastic thermodynamics
 
+Stochastic thermodynamics tracks quantities such as heat and work along individual noisy trajectories. A fluctuation theorem relates statistics across repeated runs. The relations below describe ensembles of trajectories in specified physical protocols.
+
 For a harmonic trap
 
 \[
@@ -28,6 +30,6 @@ A common Sagawa–Ueda form is
 \left\langle e^{-\beta(W-\Delta F)-I}\right\rangle=1,
 \]
 
-where \(I\) is dimensionless stochastic information and \(k_BT I\) has energy units.
+where \(I\) is dimensionless information for an individual measurement outcome and \(k_BT I\) has energy units. Its average is mutual information when measured in natural-log units. This quantifies what a measurement reveals about the state that feedback acts on.
 
 Thermodynamic quantities may later become objective terms or regime descriptors, but only when experimentally and theoretically well defined.

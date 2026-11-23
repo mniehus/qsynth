@@ -11,3 +11,11 @@ QAOA — Quantum Approximate Optimization Algorithm — is the initial quantum b
 - \(\gamma_r,\beta_r\): variational parameters optimized classically.
 
 First baseline: shallow standard QAOA. Later comparisons: greater depth, constraint-preserving mixers, compact encodings, noise and device-aware compilation. QAOA is a baseline, not a presumption that it is optimal.
+
+The cost Hamiltonian assigns energies to candidates and changes their quantum phases. The mixer Hamiltonian generates rotations that redistribute amplitudes between candidates. A classical search tunes the circuit angles, and repeated measurements provide a distribution of sampled solutions.
+
+## Reproduce this step
+
+Compare Aer samples with the exact optimum in [Notebook 05](https://github.com/mniehus/qsynth/blob/main/notebooks/05_qaoa_2x2.ipynb).
+
+The [combined QAOA reference](https://github.com/mniehus/qsynth/blob/main/notebooks/reference_qaoa_2x2.ipynb) records the earlier prototype. Its saved settings may require a locally generated IE instance.

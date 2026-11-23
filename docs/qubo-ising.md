@@ -1,4 +1,4 @@
-# QUBO and Ising mapping
+# QUBO representation
 
 **QUBO** means Quadratic Unconstrained Binary Optimization:
 
@@ -12,16 +12,8 @@ One-hot constraints may be introduced as penalties, e.g.
 A\left(\sum_jq_{ij}-1\right)^2.
 \]
 
-Using
+One-hot encoding uses one binary variable per regime?policy pair. Check that the lowest-energy states satisfy the constraints before proceeding to the [Ising mapping](ising.md).
 
-\[
-q_i=\frac{1-Z_i}{2},
-\]
+## Reproduce this step
 
-the objective becomes an Ising-type cost Hamiltonian
-
-\[
-H_C=c+\sum_i h_iZ_i+\sum_{i<j}J_{ij}Z_iZ_j.
-\]
-
-Encoding is itself part of the research problem: one-hot is simple but qubit-expensive and admits infeasible states; compact encodings and constraint-preserving mixers are alternatives.
+Compare feasible maps with all binary strings in [Notebook 03](https://github.com/mniehus/qsynth/blob/main/notebooks/03_policy_problem_to_qubo.ipynb).

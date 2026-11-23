@@ -17,3 +17,7 @@ Keep physics/simulation time, classical synthesis time, circuit construction/tra
 ## Instance structure
 
 Record \(N_\rho\), \(N_\psi\), coupling count/density, graph topology, coefficient range, constraints and robustness/scenario count. Variable count alone is not a difficulty metric.
+
+## Reproduce this step
+
+Compare an exact optimum with measured circuit outcomes and logical resources in [Notebook 06](https://github.com/mniehus/qsynth/blob/main/notebooks/06_coupled_policy_map.ipynb).

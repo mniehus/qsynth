@@ -17,6 +17,9 @@ exclude_docs: |
   /logbook.md
 nav:
   - Home: index.md
+  - Start here:
+      - Informatics / Computer Engineering students: start-meim.md
+      - Project collaborators: start-collaborators.md
   - Project:
       - Q-SYNTH overview: overview.md
       - Architecture: architecture.md
@@ -25,9 +28,12 @@ nav:
       - Stochastic thermodynamics: thermodynamics.md
       - FPGA and real-time control: fpga.md
   - Quantum engineering:
-      - From control to optimization: optimization.md
-      - QUBO and Ising mapping: qubo-ising.md
+      - Policy-map optimization: optimization.md
+      - IE cost matrix: ie-cost-matrix.md
+      - QUBO representation: qubo-ising.md
+      - Ising mapping: ising.md
       - Quantum circuits and QAOA: qaoa.md
+      - Coupled policy maps: coupled-policy.md
       - Simulation with Qiskit Aer: simulation.md
       - Benchmarking: benchmarking.md
   - Reproducibility:
