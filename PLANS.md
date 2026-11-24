@@ -2,7 +2,7 @@
 
 Simulate → build \(J_{ij}\) → exact classical solution → QUBO → Ising → QAOA → coupling → scaling → robustness → validate the selected policy map back in the IE simulator.
 
-The filenames below define the teaching sequence. [The combined QAOA prototype](notebooks/reference_qaoa_2x2.ipynb) serves as a working reference outside that sequence.
+Start with `00_system_overview.ipynb`, then choose an `overview_*.ipynb` field guide. The table below preserves the numbered experiment sequence; `00_environment_and_bell.ipynb` remains the quantum lab entry point. See the [interdisciplinary roadmap](docs/roadmap.md) for field status. [The combined QAOA prototype](notebooks/reference_qaoa_2x2.ipynb) serves as a working reference outside that sequence.
 
 | Phase | Notebook | Scope |
 |---|---|---|

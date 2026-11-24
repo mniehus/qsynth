@@ -4,6 +4,8 @@ Use the [workflow](workflow.md) as the narrative and the [notebook sequence](not
 
 | Stage | Notebook source | Existing figure or table | Reuse | Would an infographic help? |
 |---|---|---|---|---|
+| Interdisciplinary roadmap | System overview and [roadmap](roadmap.md) | Six-domain status table with quantum engineering marked active | Yes, use as the opening visual | Use a restrained academic roadmap or timeline. |
+| Maxwell's demon and information is physical | Physics overview and [thermodynamics](thermodynamics.md) | Measurement, feedback and memory-reset accounting | Reuse as concepts | A small physical cycle would help. Review any external visual first. |
 | Information engine and feedback | 02; [IE model](information-engine.md) | Langevin equation and control path | Technical reference | Yes. Label the bead, trap, sensor, estimator and actuator, then show the closed loop. |
 | Fixed-policy simulation | 02 | Regime–policy → trial → score equation and run summary | Yes, as a short method table | Yes. Show policy locked, repeat with seeds, then aggregate. |
 | Local performance \(J_{ij}\) | 01, 02 | [Annotated heatmaps](assets/policy-matrix.png) | Yes, with the independent scales and provenance visible | No. |
@@ -15,6 +17,7 @@ Use the [workflow](workflow.md) as the narrative and the [notebook sequence](not
 | QAOA circuit | 05, 06 | Depth-one circuit and shot histogram | Yes | Optional. Show preparation, cost, mixer and measurement blocks. |
 | Logical and transpiled circuit | 09 | Two-SWAP routing diagram and resource table | Yes, label the target synthetic | Optional. Redraw the single routed interaction if the text diagram is small on a projector. |
 | Ideal, finite-shot and noisy result | 10 | Outcome bars for optimum, other feasible and infeasible | Yes, label the noise model synthetic | No. Pair with the exact score and matched control. |
+| Real-QPU access | Quantum overview and 10 | Pending device target, access, and run metadata | Use as a planned milestone | A brief handoff from noisy Aer to device data is enough. |
 | Future QPU and IE replay | 10; [workflow](workflow.md) | Benchmark checklist and validation path | Use as a proposed method | Yes. Show the return to held-out IE validation. Performance data are pending. |
 
 ## Existing or external material to review

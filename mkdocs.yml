@@ -1,4 +1,4 @@
-site_name: Q-SYNTH — Quantum Engineering
+site_name: Q-SYNTH — Information Engines and Policy Synthesis
 site_description: From information engines and feedback control to QUBO, Ising models, QAOA and quantum benchmarking
 theme:
   name: material
@@ -18,11 +18,12 @@ exclude_docs: |
 nav:
   - Home: index.md
   - Start here:
-      - Master's students in Informatics Engineering: start-meim.md
-      - Project collaborators: start-collaborators.md
+      - Informatics engineering students: start-informatics.md
+      - Collaborators: start-collaborators.md
   - Project:
       - Q-SYNTH overview: overview.md
       - Architecture: architecture.md
+      - Interdisciplinary roadmap: roadmap.md
       - Synthesis and validation workflow: workflow.md
   - Physical context:
       - Information engine: information-engine.md

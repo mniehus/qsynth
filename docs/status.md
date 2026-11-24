@@ -14,6 +14,8 @@
 
 ## Current
 
+- The [interdisciplinary roadmap](roadmap.md) tracks field maturity. Quantum engineering is the active focus within offline synthesis. The [system overview](https://github.com/mniehus/qsynth/blob/main/notebooks/00_system_overview.ipynb) is the preferred first notebook.
+
 - Use the illustrative matrix as the common teaching reference. The saved notebook outputs distinguish the illustrative optimization from the measured IE pilot.
 - The verified benchmark supports an exploratory hardware-team discussion about target data, access and evaluation. Device results and held-out IE validation are pending.
 

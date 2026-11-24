@@ -1,22 +1,14 @@
-# Q-SYNTH — Quantum Engineering
+# Q-SYNTH · Information engines and policy synthesis
 
-Q-SYNTH asks a concrete engineering question:
+> Can information, measurement and feedback be used to extract useful work from thermal fluctuations, and how can estimator/controller policies for such a system be synthesized and implemented?
 
-> Can current quantum computing methods contribute meaningfully to the offline synthesis of estimator and feedback-control policies for a stochastic physical information engine?
+Q-SYNTH connects stochastic thermodynamics and information theory to state estimation, feedback control, FPGA/RFSoC implementation, classical optimization, quantum engineering, and experimental validation. Quantum engineering is the current active focus of the offline synthesis work. The fast feedback loop remains classical.
 
-The emphasis is on a reproducible chain from a real physical system to a well-defined optimization problem, strong classical baselines, a quantum formulation, and objective comparison.
+- [Informatics engineering students](start-informatics.md) can start with the physical intuition and follow the runnable examples.
+- [Collaborators](start-collaborators.md) can enter through a specialist area and follow its dependencies and maturity.
 
-\[
-\text{physical system}\rightarrow\text{simulation}\rightarrow J_{ij}\rightarrow\text{policy optimization}\rightarrow\text{QUBO}\rightarrow\text{Ising}\rightarrow\text{circuit}\rightarrow\text{QPU}
-\]
+See the [project roadmap](roadmap.md) and [synthesis and validation workflow](workflow.md).
 
-The seminar is designed for master's students in Informatics Engineering. Physics, stochastic thermodynamics, and FPGA control define the application and its constraints. The main focus is computational representation, algorithms, implementation, and benchmarking.
+### Reproduce / explore this step
 
-## Choose a route
-
-- [Master's students in Informatics Engineering](start-meim.md) start with algorithms, representation, and evaluation.
-- [Project collaborators](start-collaborators.md) start with the physical system, feedback constraints, and validation.
-
-Both routes use the same notebooks. This site explains the concepts and guides readers to executable derivations and experiments. Reusable implementation lives in Python modules.
-
-Follow the [synthesis and validation workflow](workflow.md) for the full project or the [notebook sequence](notebook-sequence.md) for the hands-on route.
+Start with the [system overview notebook](https://github.com/mniehus/qsynth/blob/main/notebooks/00_system_overview.ipynb), then choose a field overview or use the [notebook sequence](notebook-sequence.md).

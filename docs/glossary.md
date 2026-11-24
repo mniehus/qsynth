@@ -1,6 +1,6 @@
 # Acronyms & concepts
 
-Terms for master's students in Informatics Engineering following the seminar.
+Terms for Informatics engineering students following the seminar.
 
 - **ADC — Analog-to-Digital Converter** — converts an analog measurement to digital samples.
 - **Aer** — Qiskit's high-performance quantum-circuit simulator project; not normally expanded as an acronym.

@@ -4,6 +4,6 @@ With additive scores, each regime can select its best policy independently. A sw
 
 On the four-regime teaching example, increasing the weight takes the optimum from an alternating map to a map with one transition, then to a constant map. Exact enumeration provides a reference for the binary encoding and quantum samples.
 
-## Reproduce this step
+### Reproduce / explore this step
 
 Sweep switching weights and verify the coupled encoding in [Notebook 06](https://github.com/mniehus/qsynth/blob/main/notebooks/06_coupled_policy_map.ipynb).

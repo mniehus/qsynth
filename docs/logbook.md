@@ -100,6 +100,13 @@ QE-001 is only an installation/simulator sanity check; it is not evidence about 
 
 ---
 
+## 2026-11-24 — Interdisciplinary documentation structure
+
+- Added a system overview, five field guides, and a six-domain roadmap to distinguish the full information-engine project from the quantum benchmark sequence.
+- Preserved the existing lab filenames, executable cells, and saved outputs. The new guides distinguish simulator evidence, synthetic-device studies, and planned physical validation.
+
+---
+
 ## Entry template
 
 ### YYYY-MM-DD — QE-XXX: title

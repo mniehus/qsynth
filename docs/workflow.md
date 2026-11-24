@@ -17,7 +17,7 @@ The feedback loop estimates the physical state and commands the actuator at the 
 S(\Pi)=\sum_i J_{i,\Pi(i)}-\lambda\sum_{(i,k)\in E}C(\Pi(i),\Pi(k)).
 \]
 
-Here \(E\) identifies the interacting regimes, \(C\) gives the pairwise policy mismatch, and \(\lambda\) is the switching weight called \(\beta\) in the coupled notebooks. Setting the weight to zero gives independent row-wise selection. With nonzero coupling, the best choice in one regime may depend on its neighbors.
+\(S(\Pi)\) is the global score, \(\Pi(i)\) selects the policy in regime \(i\), and \(J_{i,\Pi(i)}\) is its local score. Indices \(i,k\) identify regimes. The mismatch \(C\) is dimensionless, while the switching weight and \(S\) use the same units as \(J\). Here \(E\) identifies the interacting regimes, \(C\) gives the pairwise policy mismatch, and \(\lambda\) is the switching weight called \(\beta\) in the coupled notebooks. Setting the weight to zero gives independent row-wise selection. With nonzero coupling, the best choice in one regime may depend on its neighbors.
 
 ![Two 2×2 heatmaps with regimes as rows, policies as columns and cell values printed](assets/policy-matrix.png)
 
@@ -41,7 +41,7 @@ Here \(E\) identifies the interacting regimes, \(C\) gives the pairwise policy m
 
 The current coupled hardware benchmark uses illustrative scores, a synthetic target and modeled noise. A held-out IE replay remains necessary to validate an application policy map.
 
-## Reproduce this step
+### Reproduce / explore this step
 
 Follow the [notebook sequence](notebook-sequence.md). To rebuild the figures, run the offline IE sweep from the repository root and pass its emitted JSON to the plotting example.
 
@@ -51,3 +51,5 @@ python examples/01_seminar_figures.py ie/results/runs/offline_<batch-id>/instanc
 ```
 
 Replace the batch placeholder with the actual run directory. The command writes the two PNGs to `docs/assets`.
+
+[Explore the system overview](https://github.com/mniehus/qsynth/blob/main/notebooks/00_system_overview.ipynb).

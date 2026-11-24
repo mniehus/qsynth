@@ -1,6 +1,6 @@
 # Notebook sequence and review
 
-This review is for master's students in Informatics Engineering. Start with the question and prediction, run the worked example, then use the result and presentation asset to explain the conclusion back to someone else.
+This review is for Informatics engineering students. Start with the question and prediction, run the worked example, then use the result and presentation asset to explain the conclusion back to someone else.
 
 | Notebook | Core question | Concept | Equation or representation | Main result | Execution | Scientific status | Teaching status | Seminar visual | Remaining action |
 |---|---|---|---|---|---|---|---|---|---|
@@ -48,7 +48,15 @@ IPKernelApp emitted its local TCP transport warning. No API deprecation warnings
 
 ## Recommended order
 
-Keep **00 → 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10** for self-study. The small lookup and uncoupled derivations introduce the notation before the longer simulator run and the coupled extension.
+Open the [system overview](https://github.com/mniehus/qsynth/blob/main/notebooks/00_system_overview.ipynb) first. For the detailed labs, keep **00 → 01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10** for self-study. The small lookup and uncoupled derivations introduce the notation before the longer simulator run and the coupled extension.
+
+| Layer | Current files | Naming recommendation |
+|---|---|---|
+| Project entry | `00_system_overview.ipynb` | Present first in the documentation. |
+| Field guides | `overview_*.ipynb` | Keep a separate, unnumbered family. |
+| Detailed labs | Existing `00_environment_and_bell.ipynb` through `10_noisy_device_aware_aer.ipynb` | Keep current names and links. If a future filename migration is needed, prefix the detailed labs with `lab_` and update links together. |
+
+The two `00` files serve different entry points. The system overview introduces the project, and the Bell notebook opens the quantum lab sequence.
 
 For the seminar, open with the [physical feedback loop](information-engine.md), then use **02 → 01 → 06 → 03 → 04 → 05 → 07 → 08 → 09 → 10** by topic. Use 00 as an optional Bell-state primer. Show the measured matrix before selecting a policy map. Introduce coupling before encoding, then teach the QUBO and Ising mechanics on the simpler 2×2 example and point back to the coupled derivation in 06. Finish with the [proposed hardware and IE validation loop](workflow.md). This route addresses the numbering mismatch without renaming files.
 
